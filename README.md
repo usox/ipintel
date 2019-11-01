@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/usox/ipintel.svg?branch=master)](https://travis-ci.org/usox/ipintel)
+
 # IpIntel
 
 Small library to query the fraud ip detection service of https://getipintel.net/
