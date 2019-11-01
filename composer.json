@@ -1,0 +1,29 @@
+{
+  "name": "usox/ipintel",
+  "description": "Client for https://getipintel.net/",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Usox\\IpIntel\\": ["src/IpIntel/", "tests/IpIntel/"]
+    }
+  },
+  "require": {
+    "ext-curl": "*",
+    "php": ">=7.3",
+    "php-curl-class/php-curl-class": "^8.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.4",
+    "mockery/mockery": "^1.2"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Daniel Jakob",
+      "email": "github@usox.org"
+    }
+  ],
+  "scripts": {
+    "test": "phpunit"
+  }
+}
