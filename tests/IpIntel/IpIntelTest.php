@@ -108,4 +108,28 @@ class IpIntelTest extends MockeryTestCase
 
         $this->ipIntel->validate($ip, 0.2);
     }
+
+    public function testValidateThrowsExceptionOnEmptyResponse(): void
+    {
+        $this->expectException(ServiceException::class);
+
+        $ip = '666.42.33.21';
+
+        $this->curl->shouldReceive('setTimeout')
+            ->with(5)
+            ->once();
+
+        $this->curl->shouldReceive('get')
+            ->with(
+                'https://check.getipintel.net/check.php',
+                [
+                    'ip' => $ip,
+                    'contact' => $this->contactEmailAddress
+                ]
+            )
+            ->once()
+            ->andReturnNull();
+
+        $this->ipIntel->validate($ip, 0.2);
+    }
 }
