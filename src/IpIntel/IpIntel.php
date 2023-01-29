@@ -68,7 +68,7 @@ final class IpIntel implements IpIntelInterface
             $data
         );
 
-        if (empty($response) || $response < 0 || strcmp($response, "") == 0) {
+        if (empty($response) || $response < 0 || strcmp($response, '') == 0) {
             throw new Exception\ServiceException();
         }
 
